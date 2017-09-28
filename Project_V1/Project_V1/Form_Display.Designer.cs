@@ -39,9 +39,9 @@
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_exit = new System.Windows.Forms.Button();
             this.btn_back = new System.Windows.Forms.Button();
             this.txtbox_date1 = new System.Windows.Forms.TextBox();
+            this.btn_exit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_search
@@ -140,23 +140,15 @@
             this.label2.TabIndex = 9;
             this.label2.Text = ">> ";
             // 
-            // btn_exit
-            // 
-            this.btn_exit.Location = new System.Drawing.Point(301, 584);
-            this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(210, 27);
-            this.btn_exit.TabIndex = 15;
-            this.btn_exit.Text = "EXIT";
-            this.btn_exit.UseVisualStyleBackColor = true;
-            // 
             // btn_back
             // 
-            this.btn_back.Location = new System.Drawing.Point(57, 584);
+            this.btn_back.Location = new System.Drawing.Point(40, 584);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(210, 27);
             this.btn_back.TabIndex = 15;
             this.btn_back.Text = "BACK";
             this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // txtbox_date1
             // 
@@ -166,13 +158,23 @@
             this.txtbox_date1.TabIndex = 7;
             this.txtbox_date1.Text = "DD/MM/YYYY";
             // 
+            // btn_exit
+            // 
+            this.btn_exit.Location = new System.Drawing.Point(321, 584);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(210, 27);
+            this.btn_exit.TabIndex = 16;
+            this.btn_exit.Text = "EXIT";
+            this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
+            // 
             // Form_Display
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(569, 623);
-            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.btn_exit);
+            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
@@ -186,6 +188,7 @@
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
             this.Name = "Form_Display";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Display";
             this.Load += new System.EventHandler(this.Form_Display_Load);
             this.ResumeLayout(false);
@@ -206,8 +209,8 @@
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.TextBox txtbox_date1;
+        private System.Windows.Forms.Button btn_exit;
     }
 }

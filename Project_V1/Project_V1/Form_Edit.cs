@@ -16,5 +16,29 @@ namespace Project_V1
         {
             InitializeComponent();
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            Form_MainMenu formMain = new Form_MainMenu();
+            this.Hide();
+            formMain.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            string edtDateTime = txtbox_datetime.Text;
+            string edtItemName = txtbox_name.Text;
+            int edtQty = Convert.ToInt32(numbox_qty.Value);
+            Decimal edtPrice = Convert.ToDecimal(txtbox_price.Text);
+
+            MessageBox.Show(edtDateTime + " " + edtItemName + " "
+                + edtQty.ToString() + " " + edtPrice.ToString());
+        }
     }
 }

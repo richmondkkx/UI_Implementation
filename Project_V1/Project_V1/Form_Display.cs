@@ -22,5 +22,19 @@ namespace Project_V1
         {
 
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            Form_MainMenu formMain = new Form_MainMenu();
+            this.Hide();
+            formMain.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

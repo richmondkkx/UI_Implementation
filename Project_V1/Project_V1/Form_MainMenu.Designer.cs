@@ -91,6 +91,7 @@
             this.btn_DisplayRec.TabIndex = 2;
             this.btn_DisplayRec.Text = "Display Sales Record";
             this.btn_DisplayRec.UseVisualStyleBackColor = true;
+            this.btn_DisplayRec.Click += new System.EventHandler(this.btn_DisplayRec_Click);
             // 
             // btn_EditRec
             // 
@@ -100,6 +101,7 @@
             this.btn_EditRec.TabIndex = 1;
             this.btn_EditRec.Text = "Edit Sales Record";
             this.btn_EditRec.UseVisualStyleBackColor = true;
+            this.btn_EditRec.Click += new System.EventHandler(this.btn_EditRec_Click);
             // 
             // btn_AddRec
             // 
@@ -109,15 +111,17 @@
             this.btn_AddRec.TabIndex = 0;
             this.btn_AddRec.Text = "Add Sales Record";
             this.btn_AddRec.UseVisualStyleBackColor = true;
+            this.btn_AddRec.Click += new System.EventHandler(this.btn_AddRec_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(278, 594);
+            this.button2.Location = new System.Drawing.Point(161, 594);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(210, 27);
             this.button2.TabIndex = 5;
             this.button2.Text = "EXIT";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form_MainMenu
             // 
@@ -128,6 +132,7 @@
             this.Controls.Add(this.cont_Report);
             this.Controls.Add(this.cont_Transaction);
             this.Name = "Form_MainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PHP-SREP ";
             this.Load += new System.EventHandler(this.Form_MainMenu_Load);
             this.cont_Report.ResumeLayout(false);

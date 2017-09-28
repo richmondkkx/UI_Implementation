@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_delete = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.numbox_qty = new System.Windows.Forms.NumericUpDown();
@@ -40,7 +41,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
-            this.btn_delete = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numbox_qty)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Edit Sales Record:";
             // 
+            // btn_delete
+            // 
+            this.btn_delete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_delete.Location = new System.Drawing.Point(116, 361);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(276, 23);
+            this.btn_delete.TabIndex = 1;
+            this.btn_delete.Text = "Delete Transaction";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            // 
             // btn_save
             // 
             this.btn_save.Location = new System.Drawing.Point(116, 296);
@@ -72,6 +82,7 @@
             this.btn_save.TabIndex = 1;
             this.btn_save.Text = "Save Changes";
             this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // label4
             // 
@@ -139,41 +150,34 @@
             // 
             // btn_back
             // 
-            this.btn_back.Location = new System.Drawing.Point(66, 561);
+            this.btn_back.Location = new System.Drawing.Point(47, 584);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(210, 27);
             this.btn_back.TabIndex = 8;
             this.btn_back.Text = "BACK";
             this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // btn_exit
             // 
-            this.btn_exit.Location = new System.Drawing.Point(305, 561);
+            this.btn_exit.Location = new System.Drawing.Point(299, 584);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(210, 27);
             this.btn_exit.TabIndex = 9;
             this.btn_exit.Text = "EXIT";
             this.btn_exit.UseVisualStyleBackColor = true;
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_delete.Location = new System.Drawing.Point(116, 361);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(276, 23);
-            this.btn_delete.TabIndex = 1;
-            this.btn_delete.Text = "Delete Transaction";
-            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // Form_Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 623);
+            this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_back);
-            this.Controls.Add(this.btn_exit);
             this.Name = "Form_Edit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Edit";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -195,7 +199,7 @@
         private System.Windows.Forms.TextBox txtbox_name;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_back;
-        private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_exit;
     }
 }

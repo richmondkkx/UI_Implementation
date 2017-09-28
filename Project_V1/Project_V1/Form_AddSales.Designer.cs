@@ -70,6 +70,7 @@
             this.btn_cont.TabIndex = 1;
             this.btn_cont.Text = "Save and Continue";
             this.btn_cont.UseVisualStyleBackColor = true;
+            this.btn_cont.Click += new System.EventHandler(this.btn_cont_Click);
             // 
             // label4
             // 
@@ -111,6 +112,7 @@
             this.txtbox_datetime.Name = "txtbox_datetime";
             this.txtbox_datetime.Size = new System.Drawing.Size(167, 20);
             this.txtbox_datetime.TabIndex = 1;
+            this.txtbox_datetime.TextChanged += new System.EventHandler(this.txtbox_datetime_TextChanged);
             // 
             // txtbox_price
             // 
@@ -137,21 +139,23 @@
             // 
             // btn_exit
             // 
-            this.btn_exit.Location = new System.Drawing.Point(296, 587);
+            this.btn_exit.Location = new System.Drawing.Point(285, 573);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(210, 27);
             this.btn_exit.TabIndex = 6;
             this.btn_exit.Text = "EXIT";
             this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // btn_back
             // 
-            this.btn_back.Location = new System.Drawing.Point(57, 587);
+            this.btn_back.Location = new System.Drawing.Point(43, 573);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(210, 27);
             this.btn_back.TabIndex = 6;
             this.btn_back.Text = "BACK";
             this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // Form_AddSales
             // 
@@ -162,7 +166,9 @@
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form_AddSales";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_AddSales";
+            this.Load += new System.EventHandler(this.Form_AddSales_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numbox_qty)).EndInit();
@@ -175,14 +181,14 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_cont;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numbox_qty;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtbox_datetime;
         private System.Windows.Forms.TextBox txtbox_name;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtbox_price;
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Button btn_back;
-        private System.Windows.Forms.TextBox txtbox_price;
+        private System.Windows.Forms.NumericUpDown numbox_qty;
     }
 }
